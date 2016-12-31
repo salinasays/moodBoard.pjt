@@ -74,6 +74,10 @@
 	
 	var _login2 = _interopRequireDefault(_login);
 	
+	var _about = __webpack_require__(248);
+	
+	var _about2 = _interopRequireDefault(_about);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var App = _react2.default.createClass({
@@ -91,7 +95,7 @@
 	      _react2.default.createElement(
 	        'div',
 	        { className: 'logo-class' },
-	        _react2.default.createElement('img', { className: 'logo', src: __webpack_require__(247) })
+	        _react2.default.createElement('img', { className: 'logo', src: __webpack_require__(249) })
 	      ),
 	      _react2.default.createElement(
 	        'nav',
@@ -106,6 +110,11 @@
 	              _reactRouter.Link,
 	              { to: '/' },
 	              '_home'
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: 'About' },
+	              '_about'
 	            ),
 	            _react2.default.createElement(
 	              _reactRouter.Link,
@@ -137,6 +146,7 @@
 	    _reactRouter.Route,
 	    { path: '/', component: App },
 	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _home2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'About', component: _about2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'ImageSearch', component: _imageSearch2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'Create', component: _create2.default }),
 	    '// ',
@@ -27249,12 +27259,12 @@
 			return _react2.default.createElement(
 				'div',
 				null,
+				_react2.default.createElement('hr', null),
 				_react2.default.createElement(
 					'h2',
-					null,
+					{ className: 'title' },
 					'_search for inspiration'
 				),
-				_react2.default.createElement('hr', null),
 				_react2.default.createElement(
 					'div',
 					{ className: 'form' },
@@ -37577,7 +37587,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".ribbon {\n  width: 35px;\n  position: absolute;\n  top: 0px;\n  height: 75px;\n  right: 50px;\n  transition: 1.5s;\n}\n\n.ribbon:hover {\n  height: 100px;\n  transition: 2s;\n}\n\n.logo {\n\tpadding-top: 30px;\n\tpadding-left: 20px;\n\tpadding-bottom: 40px;\n\twidth: 275px;\n\tdisplay: inline-block;\n\tfloat: left;\n}\n\n.welcome {\n\n\tmargin-right: auto;\n\tmargin-top: auto;\n\tmargin-left: 110px;\n}\n\n.nav {\n\tpadding-top: 50px;\n}\n\na:link {\n\ttext-decoration: none;\n\tpadding-right: 100px;\n\tpadding-left: 60px;\n\tfont-family: \"Courier New\", Courier, monospace;\n}\n\na:hover {\n\ttext-decoration: underline;\n}\n\na:active {\n\ttext-decoration: underline;\n\tcolor: #e8595e;\n}\n\n.form {\n\tpadding-top: 50px;\n\tpadding-left: 100px;\n\tmargin: 0 auto;\n\tmargin-left: 200px;\n}\n\n.input {\n\tborder: none;\n\tborder-bottom: 2px solid black;\n\twidth: 500px;\n\tpadding: 12px 20px;\n}\n\n.button {\n\tbackground-color: #e8595e;\n\tborder: none;\n\tcolor: white;\n\tpadding: 10px 25px;\n}\n\n.containpics {\n\twidth: auto;\n\theight: auto;\n\tpadding-top: 20px;\n\tpadding-right: 20px;\n\tcursor: pointer;\n}\n\n.myPics {\n\theight: 250px;\n\tpadding: 2px;\n}\n\n.collection-imgs {\n\theight: 300px;\n\tmargin-top:50px;\n}\n\n.savedImg {\n\theight: 250px;\n}\n", ""]);
+	exports.push([module.id, ".ribbon {\n  width: 35px;\n  position: absolute;\n  top: 0px;\n  height: 75px;\n  right: 50px;\n  transition: 1.5s;\n}\n\n.ribbon:hover {\n  height: 100px;\n  transition: 2s;\n}\n\n.logo {\n\tpadding-top: 10px;\n\tpadding-left: 10px;\n\tpadding-right: 20px;\n\twidth: 250px;\n\tdisplay: inline-block;\n\tfloat: left;\n}\n\n.title {\n\tmargin-left: 35px;\n}\n\n.heading {\n\ttext-align: center;\n}\n\n.about {\n    text-align: justify;\n    -moz-text-align-last: center;\n    text-align-last: center;\n\tletter-spacing: 1px;\n\tfont-size: 15px;\n\tfont-family: \"Courier New\", Courier, monospace;\n\tmargin-left: 25%;\n\tmargin-right: 25%;\n}\n\n.pin {\n\twidth: 125px;\n\tpadding-left: 42%;\n}\n\n.welcome {\n\n\tmargin-right: auto;\n\tmargin-top: auto;\n\tmargin-left: 110px;\n}\n\n.nav {\n\tpadding-top: 50px;\n\tpadding-bottom: 10px;\n}\n\na:link {\n\ttext-decoration: none;\n\tcolor: black;\n\tpadding-right: 10%;\n\tpadding-left: 0px;\n\tfont-family: \"Courier New\", Courier, monospace;\n}\n\na:hover {\n\ttext-decoration: underline;\n}\n\na:active {\n\ttext-decoration: underline;\n\tcolor: #e8595e;\n}\n\n.form {\n\tpadding-top: 50px;\n\tpadding-left: 100px;\n\tmargin: 0 auto;\n\tmargin-left: 200px;\n}\n\n.input {\n\tborder: none;\n\tborder-bottom: 2px solid black;\n\twidth: 500px;\n\tpadding: 12px 20px;\n}\n\n.button {\n\tbackground-color: #e8595e;\n\tborder: none;\n\tcolor: white;\n\tpadding: 10px 25px;\n}\n\n.containpics {\n\twidth: auto;\n\theight: auto;\n\tpadding-top: 20px;\n\tpadding-right: 20px;\n\tcursor: pointer;\n}\n\n.myPics {\n\theight: 250px;\n\tpadding: 2px;\n}\n\n.collection-imgs {\n\theight: 300px;\n\tmargin-top:50px;\n}\n\n.savedImg {\n\theight: 250px;\n}\n", ""]);
 	
 	// exports
 
@@ -37894,7 +37904,7 @@
 /* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 		value: true
@@ -37907,19 +37917,19 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var Home = _react2.default.createClass({
-		displayName: 'Home',
+		displayName: "Home",
 	
 		render: function render() {
 			return _react2.default.createElement(
-				'div',
+				"div",
 				null,
+				_react2.default.createElement("hr", null),
 				_react2.default.createElement(
-					'h2',
-					null,
-					'_hello, there!'
+					"h2",
+					{ className: "title" },
+					"_hello, there!"
 				),
-				_react2.default.createElement('hr', null),
-				_react2.default.createElement('img', { className: 'welcome', src: __webpack_require__(243) })
+				_react2.default.createElement("img", { className: "welcome", src: __webpack_require__(243) })
 			);
 		}
 	});
@@ -37959,12 +37969,12 @@
 			return _react2.default.createElement(
 				'div',
 				null,
+				_react2.default.createElement('hr', null),
 				_react2.default.createElement(
 					'h2',
-					null,
+					{ className: 'title' },
 					'_your moodBoard'
 				),
-				_react2.default.createElement('hr', null),
 				_react2.default.createElement(
 					'div',
 					{ className: 'collection-imgs' },
@@ -38017,16 +38027,23 @@
 				url: '/api/users'
 			});
 		},
+		userLogin: function userLogin(event) {
+			e.preventDefault();
+			_jquery2.default.ajax({
+				method: 'GET',
+				url: '/api/users'
+			});
+		},
 		render: function render() {
 			return _react2.default.createElement(
 				'div',
 				null,
+				_react2.default.createElement('hr', null),
 				_react2.default.createElement(
 					'h2',
-					null,
+					{ className: 'title' },
 					'_login or sign up'
 				),
-				_react2.default.createElement('hr', null),
 				_react2.default.createElement(
 					'div',
 					{ className: 'form' },
@@ -38038,7 +38055,7 @@
 					_react2.default.createElement('br', null),
 					_react2.default.createElement(
 						'form',
-						null,
+						{ onSubmit: this.userLogin },
 						_react2.default.createElement('input', {
 							className: 'input',
 							type: 'text',
@@ -38117,10 +38134,77 @@
 	module.exports = __webpack_require__.p + "368cbbef7727810d14005b98c433841c.png";
 
 /***/ },
-/* 247 */
+/* 247 */,
+/* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "1858366b92fbe3ae27733cdb6aa79fa8.png";
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var About = _react2.default.createClass({
+		displayName: "About",
+	
+		render: function render() {
+			return _react2.default.createElement(
+				"div",
+				null,
+				_react2.default.createElement("hr", null),
+				_react2.default.createElement(
+					"h2",
+					{ className: "title" },
+					"_about"
+				),
+				_react2.default.createElement("br", null),
+				_react2.default.createElement(
+					"div",
+					{ className: "pin" },
+					_react2.default.createElement("img", { className: "pin", src: __webpack_require__(250) })
+				),
+				_react2.default.createElement(
+					"h2",
+					{ className: "heading" },
+					"_Welcome to The MoodBoard PJT"
+				),
+				_react2.default.createElement(
+					"div",
+					{ className: "about" },
+					_react2.default.createElement(
+						"p",
+						null,
+						"The intention is to build a simple platform for creatives to utilize as a source of visual inspiration in pursuit of their own design. This project was conceived by Salina Fu. She is based in New York City."
+					),
+					_react2.default.createElement(
+						"p",
+						null,
+						"To contact Salina, please email moodBoard.PJT@gmail.com."
+					)
+				)
+			);
+		}
+	});
+	
+	exports.default = About;
+
+/***/ },
+/* 249 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "f3d7527265cb0f69a6b8dc022e05d078.png";
+
+/***/ },
+/* 250 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "bc99cd7c2d6a791ef8369a3d4b99a2d8.png";
 
 /***/ }
 /******/ ]);

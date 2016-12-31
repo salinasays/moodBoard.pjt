@@ -18,17 +18,25 @@ var Login = React.createClass({
 			url: '/api/users'
 		})
 	},
+	userLogin: function(event){
+		e.preventDefault()
+		$.ajax({
+			method: 'GET',
+			url: '/api/users'
+		})
+	},
 	render: function(){
 		return(
 			<div>
-				<h2>_login or sign up</h2>
 				<hr />
+				<h2 className="title">_login or sign up</h2>
+				
 				<div className="form">
 
 				<h3>Please login if you have an account.</h3>
 				<br />
 
-				<form>
+				<form onSubmit={this.userLogin}>
 					<input
 					className="input"
 					type="text"

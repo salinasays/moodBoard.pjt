@@ -5,8 +5,9 @@ var Create = React.createClass({
 	render: function(){
 		return (
 			<div>
-				<h2>_your moodBoard</h2>
 				<hr />
+				<h2 className="title">_your moodBoard</h2>
+				
 				<div className="collection-imgs">
 					{collection.map(function(imgs, indx) {
 						return <img className= "savedImg" key={indx} src={imgs}></img>

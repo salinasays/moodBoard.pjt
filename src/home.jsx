@@ -4,8 +4,9 @@ var Home = React.createClass({
 	render: function () {
 		return (
 			<div>
-				<h2>_hello, there!</h2>
 				<hr />
+				<h2 className="title">_hello, there!</h2>
+				
 				<img className="welcome" src={require('../imgs/home.jpg')} />
 			</div>
 		)

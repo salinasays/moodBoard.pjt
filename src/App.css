@@ -13,12 +13,36 @@
 }
 
 .logo {
-	padding-top: 30px;
-	padding-left: 20px;
-	padding-bottom: 40px;
-	width: 275px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 20px;
+	width: 250px;
 	display: inline-block;
 	float: left;
+}
+
+.title {
+	margin-left: 35px;
+}
+
+.heading {
+	text-align: center;
+}
+
+.about {
+    text-align: justify;
+    -moz-text-align-last: center;
+    text-align-last: center;
+	letter-spacing: 1px;
+	font-size: 15px;
+	font-family: "Courier New", Courier, monospace;
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+.pin {
+	width: 125px;
+	padding-left: 42%;
 }
 
 .welcome {
@@ -30,12 +54,14 @@
 
 .nav {
 	padding-top: 50px;
+	padding-bottom: 10px;
 }
 
 a:link {
 	text-decoration: none;
-	padding-right: 100px;
-	padding-left: 60px;
+	color: black;
+	padding-right: 10%;
+	padding-left: 0px;
 	font-family: "Courier New", Courier, monospace;
 }
 
