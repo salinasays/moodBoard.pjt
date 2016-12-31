@@ -139,6 +139,7 @@
 	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _home2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'ImageSearch', component: _imageSearch2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'Create', component: _create2.default }),
+	    '// ',
 	    _react2.default.createElement(_reactRouter.Route, { path: 'Login', component: _login2.default })
 	  )
 	), document.getElementById('root'));
@@ -37981,7 +37982,7 @@
 /* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 		value: true
@@ -37991,106 +37992,116 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _jquery = __webpack_require__(236);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	//import $ from 'jquery';
-	
 	var Login = _react2.default.createClass({
-		displayName: "Login",
+		displayName: 'Login',
 	
-		// getInitialState: function(){
-		// 	return {username: '', password: null}
-		// },
-		// updateUsername: function(event){
-		// 	this.setState({username: event.target.value})
-		// },
-		// updatePassword: function(event){
-		// 	this.setState({password: event.target.value})
-		// },
-		// submitLogin: function(event){
-		// 	e.preventDefault()
-		// 	$.ajax({
-		// 		method: 'POST',
-		// 		url:
-		// 	})
-		// }
+		getInitialState: function getInitialState() {
+			return { username: '', password: null };
+		},
+		updateUsername: function updateUsername(event) {
+			this.setState({ username: event.target.value });
+		},
+		updatePassword: function updatePassword(event) {
+			this.setState({ password: event.target.value });
+		},
+		createUserLogin: function createUserLogin(event) {
+			e.preventDefault();
+			_jquery2.default.ajax({
+				method: 'POST',
+				url: '/api/users'
+			});
+		},
 		render: function render() {
 			return _react2.default.createElement(
-				"div",
+				'div',
 				null,
 				_react2.default.createElement(
-					"h2",
+					'h2',
 					null,
-					"_login or sign up"
+					'_login or sign up'
 				),
-				_react2.default.createElement("hr", null),
+				_react2.default.createElement('hr', null),
 				_react2.default.createElement(
-					"div",
-					{ className: "form" },
+					'div',
+					{ className: 'form' },
 					_react2.default.createElement(
-						"h3",
+						'h3',
 						null,
-						"Please login if you have an account."
+						'Please login if you have an account.'
 					),
-					_react2.default.createElement("br", null),
-					_react2.default.createElement("input", {
-						className: "input",
-						type: "text",
-						placeholder: "username"
-					}),
-					_react2.default.createElement("br", null),
-					_react2.default.createElement("input", {
-						className: "input",
-						type: "text",
-						placeholder: "password"
-					}),
-					_react2.default.createElement("br", null),
-					_react2.default.createElement("br", null),
+					_react2.default.createElement('br', null),
 					_react2.default.createElement(
-						"button",
-						{
-							className: "button",
-							type: "submit"
-						},
-						"Login"
+						'form',
+						null,
+						_react2.default.createElement('input', {
+							className: 'input',
+							type: 'text',
+							placeholder: 'username'
+						}),
+						_react2.default.createElement('br', null),
+						_react2.default.createElement('input', {
+							className: 'input',
+							type: 'text',
+							placeholder: 'password'
+						}),
+						_react2.default.createElement('br', null),
+						_react2.default.createElement('br', null),
+						_react2.default.createElement(
+							'button',
+							{
+								className: 'button',
+								type: 'submit'
+							},
+							'Login'
+						)
 					)
 				),
-				_react2.default.createElement("br", null),
+				_react2.default.createElement('br', null),
 				_react2.default.createElement(
-					"div",
-					{ className: "form" },
+					'div',
+					{ className: 'form' },
 					_react2.default.createElement(
-						"h3",
+						'h3',
 						null,
-						"Please sign up below if you are a new user."
+						'Please sign up below if you are a new user.'
 					),
-					_react2.default.createElement("br", null),
-					_react2.default.createElement("input", {
-						className: "input",
-						type: "text",
-						placeholder: "email"
-					}),
-					_react2.default.createElement("br", null),
-					_react2.default.createElement("input", {
-						className: "input",
-						type: "text",
-						placeholder: "username"
-					}),
-					_react2.default.createElement("br", null),
-					_react2.default.createElement("input", {
-						className: "input",
-						type: "text",
-						placeholder: "password"
-					}),
-					_react2.default.createElement("br", null),
-					_react2.default.createElement("br", null),
+					_react2.default.createElement('br', null),
 					_react2.default.createElement(
-						"button",
+						'form',
+						{ onSubmit: this.createUserLogin },
+						_react2.default.createElement('input', {
+							className: 'input',
+							type: 'text',
+							placeholder: 'email'
+						}),
+						_react2.default.createElement('br', null),
+						_react2.default.createElement('input', {
+							className: 'input',
+							type: 'text',
+							placeholder: 'username'
+						}),
+						_react2.default.createElement('br', null),
+						_react2.default.createElement('input', {
+							className: 'input',
+							type: 'text',
+							placeholder: 'password'
+						})
+					),
+					_react2.default.createElement('br', null),
+					_react2.default.createElement('br', null),
+					_react2.default.createElement(
+						'button',
 						{
-							className: "button",
-							type: "submit"
+							className: 'button',
+							type: 'submit'
 						},
-						"Sign Up"
+						'Sign Up'
 					)
 				)
 			);

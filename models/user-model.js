@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
 const sequelizeConnection = require('../db');
+const Board = require('./board-model');
 
 var User = sequelizeConnection.define('user', {
 	username: {
@@ -24,6 +25,7 @@ var User = sequelizeConnection.define('user', {
 		}
 	}
 })
+
 
 // User.sync()
 

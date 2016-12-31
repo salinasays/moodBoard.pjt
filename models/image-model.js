@@ -1,5 +1,6 @@
  const Sequelize = require('sequelize');
  const sequelizeConnection = require('../db');
+ const Board = require('./board-model');
 
  var Image = sequelizeConnection.define('image', {
  	image_url: {

@@ -40,7 +40,7 @@ ReactDOM.render(
   	<IndexRoute component={Home} />
  		<Route path="ImageSearch" component={ImageSearch} />
  		<Route path="Create" component={Create} />
-    <Route path="Login" component={Login} />
+    // <Route path="Login" component={Login} />
   	</Route>
   </Router>,
   document.getElementById('root')

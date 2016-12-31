@@ -1,23 +1,23 @@
 import React from 'react';
-//import $ from 'jquery';
+import $ from 'jquery';
 
 var Login = React.createClass({
-	// getInitialState: function(){
-	// 	return {username: '', password: null}
-	// },
-	// updateUsername: function(event){
-	// 	this.setState({username: event.target.value})
-	// },
-	// updatePassword: function(event){
-	// 	this.setState({password: event.target.value})
-	// },
-	// submitLogin: function(event){
-	// 	e.preventDefault()
-	// 	$.ajax({
-	// 		method: 'POST',
-	// 		url:
-	// 	})
-	// }
+	getInitialState: function(){
+		return {username: '', password: null}
+	},
+	updateUsername: function(event){
+		this.setState({username: event.target.value})
+	},
+	updatePassword: function(event){
+		this.setState({password: event.target.value})
+	},
+	createUserLogin: function(event){
+		e.preventDefault()
+		$.ajax({
+			method: 'POST',
+			url: '/api/users'
+		})
+	},
 	render: function(){
 		return(
 			<div>
@@ -28,6 +28,7 @@ var Login = React.createClass({
 				<h3>Please login if you have an account.</h3>
 				<br />
 
+				<form>
 					<input
 					className="input"
 					type="text"
@@ -49,6 +50,7 @@ var Login = React.createClass({
 					className="button"
 					type="submit"
 					>Login</button>
+				</form>
 
 				</div>
 				<br />
@@ -57,6 +59,8 @@ var Login = React.createClass({
 				<h3>Please sign up below if you are a new user.</h3>
 
 				<br />
+
+				<form onSubmit={this.createUserLogin}>
 					<input
 					className="input"
 					type="text"
@@ -78,6 +82,7 @@ var Login = React.createClass({
 					type="text"
 					placeholder="password"
 					/>
+					</form>
 
 					<br />
 					<br />
