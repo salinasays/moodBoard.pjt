@@ -76,6 +76,8 @@ var ImageSearch = React.createClass({
 				value={this.state.search}
 				onChange={this.handleChange} 
 				/>
+				<br />
+				<br />
 
 		        <button 
 		        className="button"
